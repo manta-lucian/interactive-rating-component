@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+:root {
+  --color-orange: hsl(25, 97%, 53%);
+  --color-lightGray: hsl(217, 12%, 63%);
+  --color-mediumGray: hsl(216, 12%, 54%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-white-10: rgba(255, 255, 255, 0.05);
+  --color-darkBlue: hsl(213, 19%, 18%);
+  --color-vDarkBlue: hsl(216, 12%, 8%);
+  --color-card-top: #1f2630;
+  --color-card-bot: #171e28;
+  --fontsize-default: 1.5rem;
+}
+
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-vDarkBlue);
+  font-size: var(--fontsize-default);
+  font-family: "Overpass", sans-serif;
+  font-weight: 400;
+}
+.card-container {
+  width: 35rem;
+  height: 40rem;
+  position: relative;
+  border-radius: 3.5rem;
+  overflow: hidden;
+  padding: 4rem;
+  background: linear-gradient(to bottom, var(--color-card-top), var(--color-card-bot));
+}
+.card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  justify-content: space-between;
+  border-radius: 3.5rem;
+}
+.card__star {
+  width: 5rem;
+  height: 5rem;
+  background-color: var(--color-white-10);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.card__rating-list {
+  list-style: none;
+  display: flex;
+  font-size: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--color-lightGray);
+}
+.card__head {
+  font-size: 3rem;
+  color: var(--color-white);
+  margin-bottom: 1.5rem;
+}
+.card__text {
+  color: var(--color-mediumGray);
+  line-height: 1.5;
+}
+.card__rating-item {
+  width: 6rem;
+  height: 6rem;
+  background-color: var(--color-white-10);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.card__rating-item:hover {
+  background-color: var(--color-orange);
+  color: var(--color-white);
+}
+.card__button {
+  padding: 1.5rem 0;
+  border-radius: 100px;
+  background-color: var(--color-orange);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+.card__button a {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  text-decoration: none;
+  color: var(--color-white);
+  font-weight: 700;
+}
+
+.card__button:hover {
+  background-color: var(--color-white);
+}
+.card__button:hover a {
+  color: var(--color-orange);
+}
+
+.active-rate {
+  background-color: var(--color-lightGray);
+  color: var(--color-white);
+}
+
+.back {
+  width: 85%;
+  height: 85%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(to bottom, var(--color-card-top), var(--color-card-bot));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.back img {
+  width: 20rem;
+}
+
+.back__selected {
+  background-color: var(--color-white-10);
+  color: var(--color-orange);
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 5rem;
+}
+
+.back__heading {
+  font-size: 3.5rem;
+  color: var(--color-white);
+}
+.back__text {
+  color: var(--color-lightGray);
+  line-height: 1.5;
+}
+
+.display-none {
+  display: none;
+}
