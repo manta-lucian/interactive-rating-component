@@ -101,8 +101,6 @@ main {
   border: none;
   cursor: pointer;
   transition: all 0.2s ease-in;
-}
-.card__button a {
   font-size: 1.8rem;
   text-transform: uppercase;
   letter-spacing: 0.25rem;
@@ -113,8 +111,6 @@ main {
 
 .card__button:hover {
   background-color: var(--color-white);
-}
-.card__button:hover a {
   color: var(--color-orange);
 }
 
